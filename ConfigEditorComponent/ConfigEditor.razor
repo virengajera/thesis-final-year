@@ -1,0 +1,122 @@
+﻿@using System.Collections
+@using System.Reflection
+@using System.ComponentModel
+@using ConfigEditorComponent
+@using ConfigEditorComponent.Components.Primitive
+@using ConfigEditorComponent.Components.Dictionary
+@using ConfigEditorComponent.Components.Class
+@using ConfigEditorComponent.Components.List
+@using ConfigEditorComponent.Helpers
+
+<div id="config-editor">
+    <div class="config-content">
+
+        @if (_settings != null)
+        {
+
+            <div class="config-object-body">
+
+                @foreach (var property in ConfigEditorHelper.GetPropertiesSortedByName(_settings.GetType()))
+                {
+
+                    try
+                    {
+                        object value = property.GetValue(_settings);
+                        var propertyName = property.Name;
+                        var propertyType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
+                        TypeCode code = Type.GetTypeCode(propertyType);
+
+                        switch (code)
+                        {
+                            case TypeCode.String:
+                            case TypeCode.Int32:
+                            case TypeCode.Int64:
+                            case TypeCode.Double:
+                            case TypeCode.Boolean:
+                                <div class="config-property">
+                                    <PrimitiveViewer Property="@property"
+                                                     PropertyName="@property.Name"
+                                                     PropertyValue="@value" />
+
+                                    <PrimitiveEditor RootProperty="null"
+                                                     RootPropertyValue="@_settings"
+                                                     Property="@property"
+                                                     PropertyName="@property.Name"
+                                                     PropertyValue="@value"
+                                                     RootLevelOptionChanged="@RootLevelOptionChanged" />
+                                </div>
+
+                                break;
+
+                            case TypeCode.Object:
+
+                                if (ConfigEditorHelper.isDictionaryType(property))
+                                {
+                                    <DictionaryEditor RootProperty="null"
+                                                      RootPropertyValue="@_settings"
+                                                      Property="@property"
+                                                      PropertyName="@property.Name"
+                                                      PropertyValue="@value"
+                                                      RootLevelOptionChanged="@RootLevelOptionChanged" />
+                                }
+                                else if (ConfigEditorHelper.isListType(property))
+                                {
+                                    List<object> valueItems = null!;
+                                    if (value is IEnumerable<object> enumerable)
+                                    {
+                                        valueItems = enumerable.ToList();
+                                    }
+                                    else if (value != null)
+                                    {
+                                        // If PropertyValue is not IEnumerable but still a list, convert it.
+                                        valueItems = ((IEnumerable)value).Cast<object>().ToList();
+                                    }
+                                    <div class="config-property">
+                                        <ListViewerAndRemoveItem RootProperty="null"
+                                                                 RootPropertyValue="@_settings"
+                                                                 Property="@property"
+                                                                 PropertyName="@property.Name"
+                                                                 PropertyValue="@valueItems"
+                                                                 RootLevelOptionChanged="@RootLevelOptionChanged" />
+                                        <ListAddElement RootProperty="null"
+                                                        RootPropertyValue="@_settings"
+                                                        Property="@property"
+                                                        PropertyName="@property.Name"
+                                                        PropertyValue="@valueItems"
+                                                        RootLevelOptionChanged="@RootLevelOptionChanged" />
+                                    </div>
+
+                                }
+                                else if (propertyType.IsClass)
+                                {
+                                    <ClassEditor Property="@property"
+                                                 PropertyName="@property.Name"
+                                                 PropertyValue="@value"
+                                                 NestedClassOptionChanged="@NestedClassOptionChanged" />
+                                }
+                                else
+                                {
+                                    Console.WriteLine($"ConfigEditor - Object Type is not supported for Property : {propertyName}");
+                                }
+
+                                break;
+                            default:
+                                Console.WriteLine($"ConfigEditor - Data type not supported with Property : {propertyName} and type code : {code}");
+                                break;
+
+                        }
+
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+
+                }
+            </div>
+
+        }
+
+    </div>
+
+</div>

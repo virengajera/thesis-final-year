@@ -1,0 +1,250 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+@using ConfigEditorComponent.Model
+@using System.Reflection;
+@using System.Collections
+
+<button type="button" @onclick="@(() => ToggleEditor())" class="config-button">
+    @if (IsShowEditor)
+    {
+        <i class="fas fa-minus"></i>
+    }
+    else
+    {
+        <i class="fas fa-plus"></i>
+    }
+</button>
+
+@if (ListFormAddElement != null)
+{
+    <EditForm Model="ListFormAddElement" hidden="@(!IsShowEditor)" OnValidSubmit="AddNewElementToList">
+
+        <DataAnnotationsValidator />
+        <div class="config-new-item-form-container config-new-item-form-container-with-text">
+            @if (ValidationMessage != null)
+            {
+                <div class="config-validation-error">
+                    @ValidationMessage
+                </div>
+            }
+            <div class="row">
+                <div class="p-2">
+                    <span style="padding-left:4px">@ListFormAddElement.PropertyName - Add new element</span>
+                    <InputText @bind-Value="@ListFormAddElement.PropertyName" class="config-input-text" hidden="hidden" disabled="true"></InputText>
+                    <ValidationMessage For="@(() => ListFormAddElement.PropertyName)" />
+                </div>
+
+            </div>
+
+            <div>
+                @switch (code)
+                {
+                    case TypeCode.String:
+                        <InputText @bind-Value="ListFormAddElement.StringKindValue" class="config-input-text" disabled="@ListFormAddElement.isDisabled" />
+                        <ValidationMessage For="@(() => ListFormAddElement.StringKindValue)" />
+                        break;
+                    case TypeCode.Int32:
+                        <InputNumber TValue="int?" @bind-Value="ListFormAddElement.IntKindValue" class="config-input-text" disabled="@ListFormAddElement.isDisabled" />
+                        <ValidationMessage For="@(() => ListFormAddElement.IntKindValue)" />
+                        break;
+
+                    case TypeCode.Int64:
+                        <InputNumber TValue="long?" @bind-Value="ListFormAddElement.LongKindValue" class="config-input-text" disabled="@ListFormAddElement.isDisabled" />
+                        <ValidationMessage For="@(() => ListFormAddElement.LongKindValue)" />
+                        break;
+
+                    case TypeCode.Double:
+                        <InputNumber TValue="double?" @bind-Value="ListFormAddElement.DoubleKindValue" class="config-input-text" disabled="@ListFormAddElement.isDisabled" />
+                        <ValidationMessage For="@(() => ListFormAddElement.DoubleKindValue)" />
+                        break;
+
+                    case TypeCode.Boolean:
+                        <InputSelect TValue="bool?" @bind-Value="ListFormAddElement.BooleanKindValue" class="config-input-text" disabled="@ListFormAddElement.isDisabled">
+                            <option value="true">True</option>
+                            <option value="false" selected>False</option>
+                        </InputSelect>
+                        <ValidationMessage For="@(() => ListFormAddElement.BooleanKindValue)" />
+                        break;
+
+                }
+
+            </div>
+
+            <div>
+                @if (isNullable)
+                {
+                    <span>Null : </span> <input type="checkbox" checked="@ListFormAddElement.isNull" @onchange="ToggleInputField" />
+                }
+            </div>
+
+            <div class="config-modal-editor-footer">
+                <button type="button" class="config-modal-editor-button config-button-danger" @onclick="@(() => ToggleEditor())">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <button type="submit" class="config-modal-editor-button config-button-submit">
+                    <i class="fas fa-check-square"></i>
+                </button>
+            </div>
+
+        </div>
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public PropertyInfo? RootProperty { get; set; }
+
+    [Parameter]
+    public object? RootPropertyValue { get; set; }
+    [Parameter]
+    public PropertyInfo? Property { get; set; }
+
+    [Parameter]
+    public string PropertyName { get; set; }
+
+    [Parameter]
+    public List<object> PropertyValue { get; set; } = new();
+
+    [Parameter]
+    public EventCallback<object> RootLevelOptionChanged { get; set; }
+
+    [Parameter]
+    public EventCallback<object> NestedOptionChanged { get; set; }
+
+    private TypeCode code;
+    private Type itemType;
+    private Type actualType;
+    private bool IsShowEditor;
+    private string? ValidationMessage;
+    private bool isNullable;
+
+
+    private ListFormAddElement? ListFormAddElement;
+
+    private void ToggleEditor()
+    {
+        IsShowEditor = !IsShowEditor;
+    }
+
+    private void ToggleInputField(ChangeEventArgs e)
+    {
+        ListFormAddElement.isDisabled = (bool)e.Value;
+    }
+
+    protected override void OnParametersSet()
+    {
+        ListFormAddElement = new ListFormAddElement();
+        ValidationMessage = null;
+        PropertyInfo? property;
+        if (RootProperty == null)
+        {
+            property = RootPropertyValue?.GetType().GetProperty(PropertyName);
+        }
+        else
+        {
+            property = RootProperty.PropertyType.GetProperty(PropertyName);
+        }
+        var propertyType = property.PropertyType;
+        itemType = propertyType.GenericTypeArguments[0];
+        actualType = Nullable.GetUnderlyingType(itemType) ?? itemType;
+        code = Type.GetTypeCode(actualType);
+        isNullable = Nullable.GetUnderlyingType(itemType) != null;
+        ListFormAddElement.isDisabled = false;
+        ListFormAddElement.PropertyName = PropertyName;
+
+        if (PropertyValue == null)
+        {
+            PropertyValue = new List<object>();
+            //ListFormAddElement.isNull = true;
+            //ListFormAddElement.isDisabled = true;
+
+        }
+        switch (code)
+        {
+            case TypeCode.String:
+                ListFormAddElement.StringKindValue = "";
+                break;
+            case TypeCode.Int32:
+                ListFormAddElement.IntKindValue = 0;
+                break;
+            case TypeCode.Int64:
+                ListFormAddElement.LongKindValue = 0;
+                break;
+            case TypeCode.Double:
+                ListFormAddElement.DoubleKindValue = 0;
+                break;
+            case TypeCode.Boolean:
+                ListFormAddElement.BooleanKindValue = false;
+                break;
+        }
+
+    }
+
+    private async Task AddNewElementToList()
+    {
+
+        PropertyInfo? propertyInfo;
+        if (RootProperty == null)
+        {
+            propertyInfo = RootPropertyValue?.GetType().GetProperty(ListFormAddElement.PropertyName);
+        }
+        else
+        {
+            propertyInfo = RootProperty.PropertyType.GetProperty(ListFormAddElement.PropertyName);
+        }
+        if (propertyInfo != null && propertyInfo.CanWrite && RootPropertyValue != null)
+        {
+            try
+            {
+                object? newValue = null;
+                switch (code)
+                {
+                    case TypeCode.String:
+                        newValue = ListFormAddElement.StringKindValue;
+                        break;
+                    case TypeCode.Int32:
+                        newValue = ListFormAddElement.IntKindValue;
+                        break;
+                    case TypeCode.Int64:
+                        newValue = ListFormAddElement.LongKindValue;
+                        break;
+                    case TypeCode.Double:
+                        newValue = ListFormAddElement.DoubleKindValue;
+                        break;
+                    case TypeCode.Boolean:
+                        newValue = ListFormAddElement.BooleanKindValue;
+                        break;
+                }
+                PropertyValue.Add(newValue);
+                var typeList = (IList)Activator.CreateInstance(propertyInfo.PropertyType);
+                foreach (var i in PropertyValue)
+                {
+
+                    var typedItem = Convert.ChangeType(i, actualType);
+                    typeList.Add(typedItem);
+                }
+                propertyInfo.SetValue(RootPropertyValue, typeList);
+
+                if (RootProperty == null)
+                {
+                    await RootLevelOptionChanged.InvokeAsync(RootPropertyValue);
+                }
+                else
+                {
+                    await NestedOptionChanged.InvokeAsync(RootPropertyValue);
+                }
+
+                IsShowEditor = false;
+                ValidationMessage = null;
+
+            }
+            catch (ArgumentException ex)
+            {
+                ValidationMessage = ex.Message;
+            }
+
+        }
+
+    }
+
+}

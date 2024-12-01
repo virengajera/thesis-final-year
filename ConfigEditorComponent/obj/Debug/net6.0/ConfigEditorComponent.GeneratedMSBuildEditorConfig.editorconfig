@@ -1,0 +1,67 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows,browser
+build_property.RootNamespace = ConfigEditorComponent
+build_property.RootNamespace = ConfigEditorComponent
+build_property.ProjectDir = D:\Thesis\ConfigEditor\ConfigEditorComponent\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Thesis\ConfigEditor\ConfigEditorComponent
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Thesis/ConfigEditor/ConfigEditorComponent/Components/Class/ClassEditor.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDbGFzc1xDbGFzc0VkaXRvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Thesis/ConfigEditor/ConfigEditorComponent/Components/Dictionary/DictionaryEditor.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEaWN0aW9uYXJ5XERpY3Rpb25hcnlFZGl0b3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Thesis/ConfigEditor/ConfigEditorComponent/Components/Dictionary/DictionaryKeyEditor.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEaWN0aW9uYXJ5XERpY3Rpb25hcnlLZXlFZGl0b3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Thesis/ConfigEditor/ConfigEditorComponent/Components/Dictionary/DictionaryValueEditor.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEaWN0aW9uYXJ5XERpY3Rpb25hcnlWYWx1ZUVkaXRvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Thesis/ConfigEditor/ConfigEditorComponent/Components/List/ListAddElement.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMaXN0XExpc3RBZGRFbGVtZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Thesis/ConfigEditor/ConfigEditorComponent/Components/List/ListViewerAndRemoveItem.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMaXN0XExpc3RWaWV3ZXJBbmRSZW1vdmVJdGVtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Thesis/ConfigEditor/ConfigEditorComponent/Components/Primitive/PrimitiveEditor.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcmltaXRpdmVcUHJpbWl0aXZlRWRpdG9yLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Thesis/ConfigEditor/ConfigEditorComponent/Components/Primitive/PrimitiveViewer.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcmltaXRpdmVcUHJpbWl0aXZlVmlld2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Thesis/ConfigEditor/ConfigEditorComponent/ConfigEditor.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29uZmlnRWRpdG9yLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Thesis/ConfigEditor/ConfigEditorComponent/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Thesis/ConfigEditor/ConfigEditorComponent/Components/Collapsable.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb2xsYXBzYWJsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-8gtzzidsz2
+
+[D:/Thesis/ConfigEditor/ConfigEditorComponent/Components/ToolTip.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUb29sVGlwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-11pvkoprzh

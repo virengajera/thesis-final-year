@@ -1,0 +1,91 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+
+<button type="button" @onclick="@(() => ToggleEditor())" class="config-button">
+	@if (IsShowEditor)
+	{
+		<i class="fas fa-minus"></i>
+	}
+	else
+	{
+		<i class="fas fa-edit"></i>
+	}
+</button>
+
+@if (primitiveItem != null)
+{
+	<EditForm Model="primitiveItem" hidden="@(!IsShowEditor)" OnValidSubmit="SaveItemAsync">
+
+		<DataAnnotationsValidator />
+		<div class="config-new-item-form-container @(code == TypeCode.String ? "config-new-item-form-container-with-text" : "config-new-item-form-container-no-text")">
+			@if (ValidationMessage != null)
+			{
+				<div class="config-validation-error">
+					@ValidationMessage
+				</div>
+			}
+			<div class="row">
+				<div class="p-2">
+					<span style="padding-left:4px">@primitiveItem.PropertyName</span>
+					<InputText @bind-Value="@primitiveItem.PropertyName" class="config-input-text" hidden="hidden" disabled="true"></InputText>
+					<ValidationMessage For="@(() => primitiveItem.PropertyName)" />
+				</div>
+
+
+			</div>
+			<div>
+				@switch (code)
+				{
+					case TypeCode.String:
+						<InputText @bind-Value="primitiveItem.StringKindValue" class="config-input-text" disabled="@primitiveItem.isDisabled" />
+						<ValidationMessage For="@(() => primitiveItem.StringKindValue)" />
+						<span>Null : </span> <input type="checkbox" checked="@primitiveItem.isNull" @onchange="ToggleInputField" />
+						break;
+
+					case TypeCode.Int32:
+						<InputNumber TValue="int?" @bind-Value="primitiveItem.IntKindValue" class="config-input-text" disabled="@primitiveItem.isDisabled" />
+						<ValidationMessage For="@(() => primitiveItem.IntKindValue)" />
+						break;
+
+					case TypeCode.Int64:
+						<InputNumber TValue="long?" @bind-Value="primitiveItem.LongKindValue" class="config-input-text" disabled="@primitiveItem.isDisabled" />
+						<ValidationMessage For="@(() => primitiveItem.LongKindValue)" />
+						break;
+
+					case TypeCode.Double:
+						<InputNumber TValue="double?" @bind-Value="primitiveItem.DoubleKindValue" class="config-input-text" disabled="@primitiveItem.isDisabled" />
+						<ValidationMessage For="@(() => primitiveItem.DoubleKindValue)" />
+						break;
+
+					case TypeCode.Boolean:
+						<InputSelect TValue="bool?" @bind-Value="primitiveItem.BooleanKindValue" class="config-input-text" disabled="@primitiveItem.isDisabled">
+							<option value="true">True</option>
+							<option value="false">False</option>
+						</InputSelect>
+						<ValidationMessage For="@(() => primitiveItem.BooleanKindValue)" />
+						break;
+				}
+
+			</div>
+
+			<div>
+				@if (isNullable)
+				{
+					<span>Null : </span> <input type="checkbox" checked="@primitiveItem.isNull" @onchange="ToggleInputField" />
+				}
+			</div>
+
+			<div class="config-modal-editor-footer">
+				<button type="button" class="config-modal-editor-button config-button-danger" @onclick="@(() => ToggleEditor())">
+					<i class="fas fa-times"></i>
+				</button>
+
+				<button type="submit" class="config-modal-editor-button config-button-submit">
+					<i class="fas fa-check-square"></i>
+				</button>
+			</div>
+
+
+		</div>
+	</EditForm>
+
+}

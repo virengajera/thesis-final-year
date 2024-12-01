@@ -1,0 +1,48 @@
+﻿@using System.ComponentModel
+@using ConfigEditorComponent.Helpers
+@if (PropertyValue == null)
+{
+    <span class="config-property-name">@PropertyName
+                @if (ConfigEditorHelper.isDescriptionAttrDefined(Property))
+                {
+                    string description = ConfigEditorHelper.getDescriptionAttrValue(Property);
+                    <ToolTip Text ="@description" />
+               }: <span class="config-value-content config-value-null">null</span>
+         </span>
+    
+}
+else
+{
+    switch (code)
+    {
+        case TypeCode.String:
+            <span class="config-property-name">@PropertyName
+                @if (ConfigEditorHelper.isDescriptionAttrDefined(Property))
+                {
+                    string description = ConfigEditorHelper.getDescriptionAttrValue(Property);
+                    <ToolTip Text ="@description" />
+               }: <span class="config-value-content config-value-string">@PropertyValue</span>
+            </span>
+            break;
+
+        case TypeCode.Int32:
+        case TypeCode.Int64:
+        case TypeCode.Double:
+        case TypeCode.Boolean:
+            <span class="config-property-name">
+                @PropertyName
+                @if (ConfigEditorHelper.isDescriptionAttrDefined(Property))
+                {
+                    string description = ConfigEditorHelper.getDescriptionAttrValue(Property);
+                    <ToolTip Text="@description" />
+                }: <span class="config-value-content config-value-number">@PropertyValue</span>
+            </span>
+            break;
+
+        default:
+            Console.WriteLine($"Primitive View Data Type is not supported with Property : {PropertyName} and type code {code}");
+            break;
+    }
+    
+}
+

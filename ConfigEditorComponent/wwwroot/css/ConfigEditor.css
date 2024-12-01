@@ -1,0 +1,132 @@
+﻿#config-editor{
+    position:relative;
+    z-index:2;
+}
+
+.config-content {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.config-object-body {
+    margin-left: 0rem;
+    min-width: 500px
+}
+
+.config-object-body-empty {
+    margin-left: 20px;
+}
+
+.config-property{
+    margin:0 0 10px 0;
+}
+
+.config-property-name {
+    padding: 0 3px 0px 3px;
+}
+
+.config-value-content {
+    padding: 3px;
+}
+
+.config-button {
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    line-height: 1px;
+    font-family: 'Wingdings 2';
+    font-size: 10px;
+}
+
+
+.config-button-submit {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    line-height: 1px;
+    font-family: 'Wingdings 2';
+    font-size: 14px;
+}
+
+.config-button-danger {
+    color: red;
+}
+
+.config-input-text {
+    padding: 2px 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    line-height: 1.2em;
+}
+
+.config-validation-error {
+    color: red;
+}
+
+.config-value-string {
+    color: darkgoldenrod;
+}
+
+.config-value-number {
+    color: blueviolet;
+}
+
+.config-value-array {
+    color: darkgreen;
+}
+
+.config-value-null {
+    color: gray;
+}
+
+.config-new-item-form-container {
+    background: #fff;
+    border: 1px solid #808080;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px #1d1d1d;
+}
+
+.config-new-item-form-container-with-text {
+    width: 50%;
+}
+
+.config-new-item-form-container-no-text {
+    max-width: 300px;
+}
+
+.config-button {
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    line-height: 1px;
+    font-family: 'Wingdings 2';
+    font-size: 10px;
+}
+
+.config-modal-editor-footer{
+    display:flex;
+    justify-content:flex-end;
+    column-gap:5px;
+}
+
+.config-modal-editor-button {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    line-height: 1px;
+    font-family: 'Wingdings 2';
+    font-size: 14px;
+    margin-top: 8px;
+}
+.config-button-submit {
+   color:black
+}
+
+.config-button-danger {
+   color:red
+}
+

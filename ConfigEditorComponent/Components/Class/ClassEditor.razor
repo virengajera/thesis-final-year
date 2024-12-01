@@ -1,0 +1,137 @@
+﻿@using System.Reflection
+@using ConfigEditorComponent
+@using ConfigEditorComponent.Components.List
+@using ConfigEditorComponent.Components.Primitive
+@using ConfigEditorComponent.Components.Dictionary
+@using ConfigEditorComponent.Helpers
+@using System.ComponentModel
+@using System.Collections
+
+@if (PropertyValue != null && Property.PropertyType.IsClass && Property.PropertyType != typeof(string))
+{
+
+    var classPropertyType = Nullable.GetUnderlyingType(Property.PropertyType) ?? Property.PropertyType;
+    int spacing = ConfigEditorHelper.getSpacingValueOfCollapsableAttr(Property);
+    bool isCollapsable = ConfigEditorHelper.isCollapsableAttrDefined(Property);
+    string? description = null;
+    if (ConfigEditorHelper.isDescriptionAttrDefined(Property))
+    {
+        description = ConfigEditorHelper.getDescriptionAttrValue(Property);
+    }
+    <Collapsable isCollapsable="@isCollapsable" description="@description" spacing="@spacing" PropertyName="@PropertyName">
+        <HeadContent>
+        </HeadContent>
+
+        <BodyContent>
+
+            @foreach (var eachClassProperty in ConfigEditorHelper.GetPropertiesSortedByName(classPropertyType))
+            {
+                try
+                {
+
+                    var eachClassPropertyValue = eachClassProperty.GetValue(PropertyValue);
+                    var eachClassProperty_PropertyType = Nullable.GetUnderlyingType(eachClassProperty.PropertyType) ?? eachClassProperty.PropertyType;
+                    TypeCode code = Type.GetTypeCode(eachClassProperty_PropertyType);
+
+
+                    <div class="px-3">
+                        @switch (code)
+                        {
+                            case TypeCode.String:
+                            case TypeCode.Int32:
+                            case TypeCode.Int64:
+                            case TypeCode.Double:
+                            case TypeCode.Boolean:
+                                <div class="config-property">
+                                    <PrimitiveViewer Property="@eachClassProperty"
+                                                     PropertyName="@eachClassProperty.Name"
+                                                     PropertyValue="@eachClassPropertyValue" />
+
+                                    <PrimitiveEditor RootProperty="@Property"
+                                                     RootPropertyValue="@PropertyValue"
+                                                     Property="@eachClassProperty"
+                                                     PropertyName="@eachClassProperty.Name"
+                                                     PropertyValue="@eachClassPropertyValue"
+                                                     NestedOptionChanged="@NestedValueChanged" />
+
+                                </div>
+
+
+
+                                break;
+
+                            case TypeCode.Object:
+
+                                if (ConfigEditorHelper.isDictionaryType(eachClassProperty))
+                                {
+
+                                    <DictionaryEditor RootProperty="@Property"
+                                                      RootPropertyValue="@PropertyValue"
+                                                      Property="eachClassProperty"
+                                                      PropertyName="@eachClassProperty.Name"
+                                                      PropertyValue="@eachClassPropertyValue"
+                                                      NestedOptionChanged="@NestedValueChanged" />
+                                }
+                                else if (ConfigEditorHelper.isListType(eachClassProperty))
+                                {
+                                    List<object> valueItems = null!;
+                                    if (eachClassPropertyValue is IEnumerable<object> enumerable)
+                                    {
+                                        valueItems = enumerable.ToList();
+                                    }
+                                    else if (eachClassPropertyValue != null)
+                                    {
+                                        // If PropertyValue is not IEnumerable but still a list, convert it.
+                                        valueItems = ((IEnumerable)eachClassPropertyValue).Cast<object>().ToList();
+                                    }
+                                    <div class="config-property">
+                                        <ListViewerAndRemoveItem RootProperty="@Property"
+                                                                 RootPropertyValue="@PropertyValue"
+                                                                 Property="@eachClassProperty"
+                                                                 PropertyName="@eachClassProperty.Name"
+                                                                 PropertyValue="@valueItems"
+                                                                 NestedOptionChanged="@NestedValueChanged" />
+                                        <ListAddElement RootProperty="@Property"
+                                                        RootPropertyValue="@PropertyValue"
+                                                        Property="@eachClassProperty"
+                                                        PropertyName="@eachClassProperty.Name"
+                                                        PropertyValue="@valueItems"
+                                                        NestedOptionChanged="@NestedValueChanged" />
+                                    </div>
+
+                                }
+                                else if (eachClassProperty_PropertyType.IsClass)
+                                {
+                                    <ClassEditor Property="eachClassProperty"
+                                                 RootProperty="@Property"
+                                                 RootPropertyValue="@PropertyValue"
+                                                 PropertyName="@eachClassProperty.Name"
+                                                 PropertyValue="@eachClassPropertyValue"
+                                                 Parent="@this" />
+
+                                }
+                                else
+                                {
+                                    Console.WriteLine($"ClassViewer - Object type is not supported for class {PropertyName} and Property {eachClassProperty.Name}");
+                                }
+
+                                break;
+
+                            default:
+                                Console.WriteLine($"ClassViewer - Data type not supported for  class : {PropertyName} and Property {eachClassProperty.Name} and type code : {code}");
+                                break;
+                        }
+                    </div>
+
+                }
+                catch (TargetParameterCountException ex)
+                {
+                    Console.WriteLine($"Paramerter count mistach for Class : {PropertyName} and Property : {eachClassProperty.Name}");
+                }
+            }
+
+        </BodyContent>
+    </Collapsable>
+
+}
+

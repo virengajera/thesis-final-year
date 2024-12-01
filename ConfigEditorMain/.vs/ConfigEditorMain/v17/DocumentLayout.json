@@ -1,0 +1,424 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|d:\\thesis\\configeditor\\configeditormain\\models\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|solutionrelative:models\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|d:\\thesis\\configeditor\\configeditormain\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|d:\\thesis\\configeditor\\configeditormain\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|solutionrelative:pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9F8DB80-7E80-41DE-B904-474360DDD83F}|..\\ConfigEditorComponent\\ConfigEditorComponent.csproj|d:\\thesis\\configeditor\\configeditorcomponent\\components\\class\\classeditor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9F8DB80-7E80-41DE-B904-474360DDD83F}|..\\ConfigEditorComponent\\ConfigEditorComponent.csproj|d:\\thesis\\configeditor\\configeditorcomponent\\attributes\\configeditorattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9F8DB80-7E80-41DE-B904-474360DDD83F}|..\\ConfigEditorComponent\\ConfigEditorComponent.csproj|d:\\thesis\\configeditor\\configeditorcomponent\\configeditor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9F8DB80-7E80-41DE-B904-474360DDD83F}|..\\ConfigEditorComponent\\ConfigEditorComponent.csproj|d:\\thesis\\configeditor\\configeditorcomponent\\configeditorcomponent.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|d:\\thesis\\configeditor\\configeditormain\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|solutionrelative:app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|d:\\thesis\\configeditor\\configeditormain\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|solutionrelative:_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9F8DB80-7E80-41DE-B904-474360DDD83F}|..\\ConfigEditorComponent\\ConfigEditorComponent.csproj|d:\\thesis\\configeditor\\configeditorcomponent\\components\\tooltip.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9F8DB80-7E80-41DE-B904-474360DDD83F}|..\\ConfigEditorComponent\\ConfigEditorComponent.csproj|d:\\thesis\\configeditor\\configeditorcomponent\\components\\dictionary\\dictionaryeditor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9F8DB80-7E80-41DE-B904-474360DDD83F}|..\\ConfigEditorComponent\\ConfigEditorComponent.csproj|d:\\thesis\\configeditor\\configeditorcomponent\\components\\dictionary\\dictionarykeyeditor.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|d:\\thesis\\configeditor\\configeditormain\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|solutionrelative:pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9F8DB80-7E80-41DE-B904-474360DDD83F}|..\\ConfigEditorComponent\\ConfigEditorComponent.csproj|d:\\thesis\\configeditor\\configeditorcomponent\\components\\primitive\\primitiveviewer.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9F8DB80-7E80-41DE-B904-474360DDD83F}|..\\ConfigEditorComponent\\ConfigEditorComponent.csproj|d:\\thesis\\configeditor\\configeditorcomponent\\components\\primitive\\primitiveviewer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9F8DB80-7E80-41DE-B904-474360DDD83F}|..\\ConfigEditorComponent\\ConfigEditorComponent.csproj|d:\\thesis\\configeditor\\configeditorcomponent\\components\\collapsable.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|d:\\thesis\\configeditor\\configeditormain\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|solutionrelative:shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|d:\\thesis\\configeditor\\configeditormain\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|solutionrelative:shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|d:\\thesis\\configeditor\\configeditormain\\shared\\surveyprompt.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|solutionrelative:shared\\surveyprompt.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|d:\\thesis\\configeditor\\configeditormain\\pages\\_host.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|solutionrelative:pages\\_host.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9F8DB80-7E80-41DE-B904-474360DDD83F}|..\\ConfigEditorComponent\\ConfigEditorComponent.csproj|d:\\thesis\\configeditor\\configeditorcomponent\\components\\primitive\\primitiveeditor.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9F8DB80-7E80-41DE-B904-474360DDD83F}|..\\ConfigEditorComponent\\ConfigEditorComponent.csproj|d:\\thesis\\configeditor\\configeditorcomponent\\helpers\\configeditorhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|d:\\thesis\\configeditor\\configeditormain\\configeditormain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|solutionrelative:configeditormain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|d:\\thesis\\configeditor\\configeditormain\\pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|solutionrelative:pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|d:\\thesis\\configeditor\\configeditormain\\pages\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C059AC4D-ADEA-48CA-8052-B74B4AF36C11}|ConfigEditorMain.csproj|solutionrelative:pages\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClassEditor.razor",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Components\\Class\\ClassEditor.razor",
+              "RelativeDocumentMoniker": "..\\ConfigEditorComponent\\Components\\Class\\ClassEditor.razor",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Components\\Class\\ClassEditor.razor",
+              "RelativeToolTip": "..\\ConfigEditorComponent\\Components\\Class\\ClassEditor.razor",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-08T08:21:03.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConfigEditorAttribute.cs",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Attributes\\ConfigEditorAttribute.cs",
+              "RelativeDocumentMoniker": "..\\ConfigEditorComponent\\Attributes\\ConfigEditorAttribute.cs",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Attributes\\ConfigEditorAttribute.cs",
+              "RelativeToolTip": "..\\ConfigEditorComponent\\Attributes\\ConfigEditorAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T08:20:56.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Settings.cs",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Models\\Settings.cs",
+              "RelativeDocumentMoniker": "Models\\Settings.cs",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Models\\Settings.cs",
+              "RelativeToolTip": "Models\\Settings.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAADwvw4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T16:21:18.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.razor",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Pages\\Index.razor",
+              "RelativeDocumentMoniker": "Pages\\Index.razor",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Pages\\Index.razor",
+              "RelativeToolTip": "Pages\\Index.razor",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-15T15:38:27.603Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.razor",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\App.razor",
+              "RelativeDocumentMoniker": "App.razor",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\App.razor",
+              "RelativeToolTip": "App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-25T14:58:18.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PrimitiveViewer.razor.cs",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Components\\Primitive\\PrimitiveViewer.razor.cs",
+              "RelativeDocumentMoniker": "..\\ConfigEditorComponent\\Components\\Primitive\\PrimitiveViewer.razor.cs",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Components\\Primitive\\PrimitiveViewer.razor.cs",
+              "RelativeToolTip": "..\\ConfigEditorComponent\\Components\\Primitive\\PrimitiveViewer.razor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T14:36:34.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Counter.razor",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Pages\\Counter.razor",
+              "RelativeDocumentMoniker": "Pages\\Counter.razor",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Pages\\Counter.razor",
+              "RelativeToolTip": "Pages\\Counter.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-15T16:17:57.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\_Imports.razor",
+              "RelativeDocumentMoniker": "_Imports.razor",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\_Imports.razor",
+              "RelativeToolTip": "_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-15T15:50:03.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ConfigEditorComponent.csproj",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\ConfigEditorComponent.csproj",
+              "RelativeDocumentMoniker": "..\\ConfigEditorComponent\\ConfigEditorComponent.csproj",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\ConfigEditorComponent.csproj",
+              "RelativeToolTip": "..\\ConfigEditorComponent\\ConfigEditorComponent.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-18T14:31:28.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConfigEditor.razor",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\ConfigEditor.razor",
+              "RelativeDocumentMoniker": "..\\ConfigEditorComponent\\ConfigEditor.razor",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\ConfigEditor.razor",
+              "RelativeToolTip": "..\\ConfigEditorComponent\\ConfigEditor.razor",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T16:27:09.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DictionaryKeyEditor.razor.cs",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Components\\Dictionary\\DictionaryKeyEditor.razor.cs",
+              "RelativeDocumentMoniker": "..\\ConfigEditorComponent\\Components\\Dictionary\\DictionaryKeyEditor.razor.cs",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Components\\Dictionary\\DictionaryKeyEditor.razor.cs",
+              "RelativeToolTip": "..\\ConfigEditorComponent\\Components\\Dictionary\\DictionaryKeyEditor.razor.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAUwI0AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T16:24:46.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ToolTip.razor",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Components\\ToolTip.razor",
+              "RelativeDocumentMoniker": "..\\ConfigEditorComponent\\Components\\ToolTip.razor",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Components\\ToolTip.razor",
+              "RelativeToolTip": "..\\ConfigEditorComponent\\Components\\ToolTip.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-07T16:53:36.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DictionaryEditor.razor",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Components\\Dictionary\\DictionaryEditor.razor",
+              "RelativeDocumentMoniker": "..\\ConfigEditorComponent\\Components\\Dictionary\\DictionaryEditor.razor",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Components\\Dictionary\\DictionaryEditor.razor",
+              "RelativeToolTip": "..\\ConfigEditorComponent\\Components\\Dictionary\\DictionaryEditor.razor",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T16:38:39.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PrimitiveViewer.razor",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Components\\Primitive\\PrimitiveViewer.razor",
+              "RelativeDocumentMoniker": "..\\ConfigEditorComponent\\Components\\Primitive\\PrimitiveViewer.razor",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Components\\Primitive\\PrimitiveViewer.razor",
+              "RelativeToolTip": "..\\ConfigEditorComponent\\Components\\Primitive\\PrimitiveViewer.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-18T14:37:02.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Collapsable.razor",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Components\\Collapsable.razor",
+              "RelativeDocumentMoniker": "..\\ConfigEditorComponent\\Components\\Collapsable.razor",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Components\\Collapsable.razor",
+              "RelativeToolTip": "..\\ConfigEditorComponent\\Components\\Collapsable.razor",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAADYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-20T12:08:02.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Shared\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Shared\\NavMenu.razor",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Shared\\NavMenu.razor",
+              "RelativeToolTip": "Shared\\NavMenu.razor",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAA8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-15T15:50:07.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SurveyPrompt.razor",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Shared\\SurveyPrompt.razor",
+              "RelativeDocumentMoniker": "Shared\\SurveyPrompt.razor",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Shared\\SurveyPrompt.razor",
+              "RelativeToolTip": "Shared\\SurveyPrompt.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-15T15:50:10.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "_Host.cshtml",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Pages\\_Host.cshtml",
+              "RelativeDocumentMoniker": "Pages\\_Host.cshtml",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Pages\\_Host.cshtml",
+              "RelativeToolTip": "Pages\\_Host.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-15T15:50:19.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Shared\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Shared\\MainLayout.razor",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Shared\\MainLayout.razor",
+              "RelativeToolTip": "Shared\\MainLayout.razor",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-15T15:50:08.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PrimitiveEditor.razor.cs",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Components\\Primitive\\PrimitiveEditor.razor.cs",
+              "RelativeDocumentMoniker": "..\\ConfigEditorComponent\\Components\\Primitive\\PrimitiveEditor.razor.cs",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Components\\Primitive\\PrimitiveEditor.razor.cs",
+              "RelativeToolTip": "..\\ConfigEditorComponent\\Components\\Primitive\\PrimitiveEditor.razor.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAA/wAcAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T14:39:05.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ConfigEditorHelper.cs",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Helpers\\ConfigEditorHelper.cs",
+              "RelativeDocumentMoniker": "..\\ConfigEditorComponent\\Helpers\\ConfigEditorHelper.cs",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\Helpers\\ConfigEditorHelper.cs",
+              "RelativeToolTip": "..\\ConfigEditorComponent\\Helpers\\ConfigEditorHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T14:09:39.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Pages\\Error.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Error.cshtml",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Pages\\Error.cshtml",
+              "RelativeToolTip": "Pages\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-15T16:17:56.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ConfigEditorMain.csproj",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\ConfigEditorMain.csproj",
+              "RelativeDocumentMoniker": "ConfigEditorMain.csproj",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\ConfigEditorMain.csproj",
+              "RelativeToolTip": "ConfigEditorMain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-15T16:18:01.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Pages\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\_Layout.cshtml",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\Pages\\_Layout.cshtml",
+              "RelativeToolTip": "Pages\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-15T15:50:22.293Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-08T08:22:19.117Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

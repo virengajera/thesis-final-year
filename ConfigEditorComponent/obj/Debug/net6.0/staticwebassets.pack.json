@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ConfigEditorComponent.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ConfigEditorComponent.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\wwwroot\\background.png",
+      "PackagePath": "staticwebassets\\background.png"
+    },
+    {
+      "Id": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\wwwroot\\css\\ConfigEditor.css",
+      "PackagePath": "staticwebassets\\css\\ConfigEditor.css"
+    },
+    {
+      "Id": "D:\\Thesis\\ConfigEditor\\ConfigEditorComponent\\wwwroot\\exampleJsInterop.js",
+      "PackagePath": "staticwebassets\\exampleJsInterop.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ConfigEditorComponent.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.ConfigEditorComponent.props",
+      "PackagePath": "build\\ConfigEditorComponent.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.ConfigEditorComponent.props",
+      "PackagePath": "buildMultiTargeting\\ConfigEditorComponent.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.ConfigEditorComponent.props",
+      "PackagePath": "buildTransitive\\ConfigEditorComponent.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,45 @@
+﻿@page "/"
+
+@using Microsoft.Extensions.Options
+@using Newtonsoft.Json.Linq;
+@using Newtonsoft.Json;
+@using ConfigEditorMain.Models
+
+@inject IOptionsSnapshot<Settings> settings;
+
+<PageTitle>Index</PageTitle>
+
+<ConfigEditorComponent.ConfigEditor OptionValue="@_settings" OptionValueChanged="OptionValueChanged"/>
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@code {
+    private Settings _settings;
+    private string filePath = "D:\\Thesis\\ConfigEditor\\ConfigEditorMain\\appsettings.json";
+    private static JsonSerializer serializer = JsonSerializer.CreateDefault(new JsonSerializerSettings()
+        {
+            Formatting = Formatting.Indented
+        });
+
+    protected override void OnInitialized()
+    {
+        _settings = settings.Value;
+
+    }
+
+    public void OptionValueChanged(object newValue)
+    {
+        Console.WriteLine(newValue);
+        _settings = (Settings)newValue;
+
+        string settingFileContent = File.ReadAllText(filePath);
+        JObject currentSettingsJsonData = JObject.Parse(settingFileContent);
+
+        currentSettingsJsonData["Settings"] = JToken.FromObject(newValue, serializer);
+
+        settingFileContent = currentSettingsJsonData.ToString(Formatting.Indented);
+
+        File.WriteAllText(filePath, settingFileContent);
+
+    }
+}

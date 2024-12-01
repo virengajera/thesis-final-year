@@ -1,0 +1,136 @@
+﻿@using System.Collections
+@using System.Reflection
+@using Microsoft.AspNetCore.Components.Forms
+
+@using ConfigEditorComponent.Components
+@using ConfigEditorComponent.Components.Primitive
+@using ConfigEditorComponent.Helpers
+@using ConfigEditorComponent.Components.List
+
+
+@{
+    <Collapsable isCollapsable="true" isDictionaryKey="true" PropertyName="@KeyValues.Key.ToString()">
+
+        <HeadContent>
+            <span>
+                <button type="button" class="config-button config-button-danger" @onclick="RemoveItem">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button type="button" class="config-button" @onclick="@(() => ToggleEditor())">
+
+                    @if (IsShowEditor)
+                    {
+                        <i class="fas fa-minus"></i>
+                    }
+                    else
+                    {
+                        <i class="fas fa-edit"></i>
+                    }
+
+                </button>
+
+            </span>
+
+            @if (IsShowEditor)
+            {
+                <div class="config-new-item-form-container config-new-item-form-container-no-text">
+                    <EditForm Model="@DictionaryKeyEditField" OnValidSubmit="@EditDictionaryKey">
+
+                        <div class="py-1">
+                            <lable>new value : </lable>
+                            <InputText @bind-Value="@DictionaryKeyEditField.newKeyName" class="config-input-text" />
+                        </div>
+                        <div class="config-validation-error">
+                            @ValidationMessage
+                        </div>
+
+                        <div class="config-modal-editor-footer">
+                            <button type="button" class="config-modal-editor-button config-button-danger" @onclick="@(() => ToggleEditor())">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            <button type="submit" class="config-modal-editor-button config-button-submit">
+                                <i class="fas fa-check-square"></i>
+                            </button>
+                        </div>
+
+
+                    </EditForm>
+                </div>
+            }
+
+        </HeadContent>
+
+        <BodyContent>
+
+            @{
+                Type valueType = KeyValues.Value.GetType();
+
+                @if (valueType.IsClass && valueType != typeof(string))
+                {
+                    PropertyInfo[] allPropertyInfo = valueType.GetProperties();
+
+
+                    string key = KeyValues.Key.ToString();
+
+                    <div class="px-4">
+                        @foreach (var eachPropertyInfo in allPropertyInfo)
+                        {
+
+                            object dictItemVal = eachPropertyInfo.GetValue(KeyValues.Value);
+
+                            <PrimitiveViewer Property="@eachPropertyInfo"
+                                             PropertyName="@eachPropertyInfo.Name"
+                                             PropertyValue="@dictItemVal" />
+
+                            <DictionaryValueEditor RootProperty="@RootProperty"
+                                                   RootPropertyValue="@RootPropertyValue"
+                                                   Property="@eachPropertyInfo"
+                                                   PropertyName="@eachPropertyInfo.Name"
+                                                   PropertyValue="@dictItemVal"
+                                                   KeyName="@KeyValues.Key.ToString()"
+                                                   RootPropertyName="@PropertyName"
+                                                   RootLevelOptionChanged="@RootLevelOptionChanged"
+                                                   NestedOptionChanged="@NestedOptionChanged" />
+
+
+                            <br />
+                        }
+
+                    </div>
+
+                }
+                else
+                {
+                    // Determine the runtime types of Key and Value in the dictionary entry
+                    var keyType = KeyValues.Key.GetType();
+                    var valueType2 = KeyValues.Value.GetType();
+
+                    // Dynamically get PropertyInfo for Key and Value properties of the runtime KeyValuePair type
+                    var keyValueType = typeof(KeyValuePair<,>).MakeGenericType(keyType, valueType2);
+                    var keyPropertyInfo = keyValueType.GetProperty("Key");
+                    var valuePropertyInfo = keyValueType.GetProperty("Value");
+
+
+                    <PrimitiveViewer Property="@valuePropertyInfo"
+                                     PropertyName="@KeyValues.Key.ToString()"
+                                     PropertyValue="@KeyValues.Value" />
+
+
+                    <DictionaryValueEditor RootProperty="@RootProperty"
+                                           RootPropertyValue="@RootPropertyValue"
+                                           Property="@valuePropertyInfo"
+                                           PropertyName="@KeyValues.Key.ToString()"
+                                           PropertyValue="@KeyValues.Value"
+                                           KeyName="@KeyValues.Key.ToString()"
+                                           RootPropertyName="@PropertyName"
+                                           RootLevelOptionChanged="@RootLevelOptionChanged"
+                                           NestedOptionChanged="@NestedOptionChanged" />
+                }
+
+            }
+
+
+        </BodyContent>
+    </Collapsable>
+
+}

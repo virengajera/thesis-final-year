@@ -1,0 +1,98 @@
+﻿@using System.Collections
+@using System.Reflection
+@using Microsoft.AspNetCore.Components.Forms
+
+
+<button type="button" class="config-button" @onclick="@(() => ToggleEditor())">
+
+	@if (IsShowEditor)
+	{
+		<i class="fas fa-minus"></i>
+	}
+	else
+	{
+		<i class="fas fa-edit"></i>
+	}
+
+</button>
+
+
+@if (IsShowEditor)
+{
+
+	<EditForm Model="@DictionaryValueEditField" OnValidSubmit="EditDictionaryValue">
+		<DataAnnotationsValidator />
+
+		<div class="config-new-item-form-container @(code == TypeCode.String ? "config-new-item-form-container-with-text" : "config-new-item-form-container-no-text")">
+			@if (ValidationMessage != null)
+			{
+				<div class="config-validation-error">
+					@ValidationMessage
+				</div>
+			}
+			<div class="row">
+				<div class="p-2">
+					<span style="padding-left:4px">@DictionaryValueEditField.PropertyName</span>
+					<InputText @bind-Value="@DictionaryValueEditField.PropertyName" hidden="hidden" class="config-input-text" disabled="true"></InputText>
+					<ValidationMessage For="@(() => DictionaryValueEditField.PropertyName)" />
+				</div>
+
+			</div>
+			<div>
+				@switch (code)
+				{
+					case TypeCode.String:
+						<InputText @bind-Value="DictionaryValueEditField.StringKindValue" class="config-input-text" disabled="@DictionaryValueEditField.isDisabled" />
+						<ValidationMessage For="@(() => DictionaryValueEditField.StringKindValue)" />
+						<span>Null : </span> <input type="checkbox" checked="@DictionaryValueEditField.isNull" @onchange="ToggleInputField" />
+						break;
+
+					case TypeCode.Int32:
+						<InputNumber TValue="int?" @bind-Value="DictionaryValueEditField.IntKindValue" class="config-input-text" disabled="@DictionaryValueEditField.isDisabled" />
+						<ValidationMessage For="@(() => DictionaryValueEditField.IntKindValue)" />
+						break;
+
+					case TypeCode.Int64:
+						<InputNumber TValue="long?" @bind-Value="DictionaryValueEditField.LongKindValue" class="config-input-text" disabled="@DictionaryValueEditField.isDisabled" />
+						<ValidationMessage For="@(() => DictionaryValueEditField.LongKindValue)" />
+						break;
+
+					case TypeCode.Double:
+						<InputNumber TValue="double?" @bind-Value="DictionaryValueEditField.DoubleKindValue" class="config-input-text" disabled="@DictionaryValueEditField.isDisabled" />
+						<ValidationMessage For="@(() => DictionaryValueEditField.DoubleKindValue)" />
+						break;
+
+					case TypeCode.Boolean:
+						<InputSelect TValue="bool?" @bind-Value="DictionaryValueEditField.BooleanKindValue" class="config-input-text" disabled="@DictionaryValueEditField.isDisabled">
+							<option value="true">True</option>
+							<option value="false">False</option>
+						</InputSelect>
+						<ValidationMessage For="@(() => DictionaryValueEditField.BooleanKindValue)" />
+
+						break;
+
+
+
+				}
+
+			</div>
+
+			<div>
+				@if (isNullable)
+				{
+					<span>Null : </span> <input type="checkbox" checked="@DictionaryValueEditField.isNull" @onchange="ToggleInputField" />
+				}
+			</div>
+
+			<div class="config-modal-editor-footer">
+				<button type="button" class="config-modal-editor-button config-button-danger" @onclick="@(() => ToggleEditor())">
+					<i class="fas fa-times"></i>
+				</button>
+				<button type="submit" class="config-modal-editor-button config-button-submit">
+					<i class="fas fa-check-square"></i>
+				</button>
+			</div>
+
+		</div>
+	</EditForm>
+}

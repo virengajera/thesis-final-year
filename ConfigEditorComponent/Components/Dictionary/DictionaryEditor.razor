@@ -1,0 +1,96 @@
+﻿@using System.Collections
+@using System.Reflection
+@using Microsoft.AspNetCore.Components.Forms
+@using ConfigEditorComponent.Helpers
+@using System.ComponentModel
+
+@if (PropertyValue != null)
+{
+	int spacing = ConfigEditorHelper.getSpacingValueOfCollapsableAttr(Property);
+	bool isCollapsable = ConfigEditorHelper.isCollapsableAttrDefined(Property);
+	string? description = null;
+	if (ConfigEditorHelper.isDescriptionAttrDefined(Property))
+	{
+		description = ConfigEditorHelper.getDescriptionAttrValue(Property);
+
+	}
+	<Collapsable isCollapsable="@isCollapsable" description="@description" spacing="@spacing" PropertyName="@PropertyName">
+		<HeadContent>
+
+			<span>
+				<button type="button" class="config-button" @onclick="@(() => ToggleEditor())">
+
+					@if (IsShowEditor)
+					{
+						<i class="fas fa-minus"></i>
+					}
+					else
+					{
+						<i class="fas fa-plus"></i>
+					}
+				</button>
+			</span>
+			@if (IsShowEditor)
+			{
+				<div class="config-new-item-form-container config-new-item-form-container-no-text">
+					<EditForm Model="@DictionaryFormField" OnValidSubmit="AddDictionaryItem">
+
+						<div class="py-1">
+							<lable>Key : </lable>
+							<InputText @bind-Value="@DictionaryFormField.KeyName" class="config-input-text" />
+						</div>
+						<div class="config-validation-error">
+							@ValidationMessage
+						</div>
+
+						<div class="config-modal-editor-footer">
+							<button type="button" class="config-modal-editor-button config-button-danger" @onclick="@(() => ToggleEditor())">
+								<i class="fas fa-times"></i>
+							</button>
+							<button type="submit" class="config-modal-editor-button config-button-submit">
+								<i class="fas fa-check-square"></i>
+							</button>
+						</div>
+					</EditForm>
+				</div>
+			}
+
+		</HeadContent>
+		<BodyContent>
+
+			<div class="px-3">
+				@{
+					var list = new List<DictionaryEntry>();
+					foreach (DictionaryEntry dictItem in (IDictionary)PropertyValue)
+					{
+
+						list.Add(dictItem);
+
+					}
+
+					list.Sort((x, y) => ((IComparable)x.Key).CompareTo(y.Key));
+
+					foreach (var kvp in list)
+					{
+						<DictionaryKeyEditor RootProperty="@RootProperty"
+											 RootPropertyValue="@RootPropertyValue"
+											 PropertyName="@PropertyName"
+											 KeyValues="@kvp"
+											 KeyAlreadyExistsMethod="@KeyAlreadyExists"
+											 RootLevelOptionChanged="@RootLevelOptionChanged"
+											 NestedOptionChanged="@NestedOptionChanged" />
+					}
+				}
+			</div>
+
+		</BodyContent>
+	</Collapsable>
+	
+
+	
+}
+
+
+
+
+
